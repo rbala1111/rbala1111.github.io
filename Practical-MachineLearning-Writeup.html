@@ -251,8 +251,8 @@ summary(cor)
 <p>Let us use boosting algorithm method with the given data. Let us fit model with boosting algorithm and 10-fold cross validation to predict <code>classe</code> with all other predictors and then plot accuracy of this model on the scale <code>[0.9, 1]</code>.</p>
 
 <pre><code class="r">set.seed(123)
-## boostFit &lt;- train(classe ~ ., method = &quot;gbm&quot;, data = training, verbose = F, trControl =
-##trainControl(method = &quot;cv&quot;, number = 10))
+ boostFit &lt;- train(classe ~ ., method = &quot;gbm&quot;, data = training, verbose = F, trControl =
+ trainControl(method = &quot;cv&quot;, number = 10))
 boostFit
 </code></pre>
 
@@ -297,8 +297,8 @@ The boosting algorithm generated a good model with accuracy = 0.997.</p>
 <p>Let us now fit model with random forests algorithm and 10-fold cross validation to predict <code>classe</code> with all other predictors and then plot accuracy of the model on the <code>same scale</code>as boosting model.</p>
 
 <pre><code class="r">set.seed(123)
-## rfFit &lt;- train(classe ~ ., method = &quot;rf&quot;, data = training, importance = T, trControl =
-## trainControl(method = &quot;cv&quot;, number = 10))
+ rfFit &lt;- train(classe ~ ., method = &quot;rf&quot;, data = training, importance = T, trControl =
+ trainControl(method = &quot;cv&quot;, number = 10))
 rfFit
 </code></pre>
 
